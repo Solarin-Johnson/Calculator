@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatxible" content="IE=edge">
+    <title>Otondo || Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="icon" type="image/x-icon" media="screen" href="../images/otondo_blur.png">
+    <script src="../fa/all.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div id="blank"></div>
+    <div id="container">
+        <div class="header">
+            <div id="menu_icon"><span style="margin-top: 10px;" class="fas fa-bars fa-2x"></span></div>
+        </div>
+        <div class="content">
+            <div id="screen">
+                <div id="top"></div>
+                <div id="bottom_parent"><span id="bottom">0</span></div>
+                <div id="m_famz">
+                    <div title="Clear all Memory" id="mc" onclick="mc()">MC</div>
+                    <div title="Memory recall " id="mr" onclick="m_recall()">MR</div>
+                    <div title="Add to Memory " onclick="mPlus()">M+</div>
+                    <div title="Subtract from Memory" onclick="mSub()">M-</div>
+                    <div title="Save to Memory" onclick="mSave(+1)">MS</div>
+                    <div title="Memory History" id="mHistory" onclick="mHistory()">M <span id="history" style="font-size: 13px;" class="fas fa-caret-down"></span></div>
+
+                </div>
+            </div>
+            <div id="History">
+                <div id="blured" onclick="shows()" ></div>
+                <div id="lists">
+
+                </div>
+                <div id="clear_container"><span onclick="empty()" id="clear" class="fas fa-trash-alt"></span></div>
+            </div>
+            <div id="keys">
+                <div id="btn" class="percentage" onclick="percentage()"><span class="fas fa-percent"></span></div>
+                <div id="btn" class="square_root" onclick="root()"><span class="fas fa-square-root-alt"></span></div>
+                <div id="btn" onclick="invers()"> <span class="fas fa-times"></span> <small style="margin: -18px 0 0 1px; font-size: 13px; font-weight: bolder;">-1</small></div>
+                <div id="btn" class="square" onclick="square()"> <span class="fas fa-times"></span> <small style="margin: -18px 0 0 1px; font-size: 13px; font-weight: bolder;">2</small></div>
+                <div id="btn" class="clear_top" onclick="clear_few()">CE</div>
+                <div id="btn"class="clear_bottom" onclick="clear_all()">C</div>
+                <div id="btn" class="delete" onclick="backspace()"><span class="fas fa-backspace"></span></div>
+                <div id="btn" class="arithmetics" onclick="arith('/')"><span class="fas fa-divide"></span></div>
+                <div id="btn" class="numbs" onclick="writeN(7)">7</div>
+                <div id="btn" class="numbs" onclick="writeN(8)">8</div>
+                <div id="btn" class="numbs" onclick="writeN(9)">9</div>
+                <div id="btn" class="arithmetics" onclick="arith('x')"><span class="fas fa-times"></span></div>
+                <div id="btn" class="numbs" onclick="writeN(4)">4</div>
+                <div id="btn" class="numbs" onclick="writeN(5)">5</div>
+                <div id="btn" class="numbs" onclick="writeN(6)">6</div>
+                <div id="btn" class="arithmetics" onclick="arith('-')"><span class="fas fa-minus"></span></div>
+                <div id="btn" class="numbs" onclick="writeN(1)">1</div>
+                <div id="btn" class="numbs" onclick="writeN(2)">2</div>
+                <div id="btn" class="numbs" onclick="writeN(3)">3</div>
+                <div id="btn" class="arithmetics" onclick="arith('+')"><span class="fas fa-plus"></span></div>
+                <div id="btn" class="neg" onclick="sign()"> + / -</div>
+                <div id="btn" class="numbs" onclick="writeN(0)">0</div>
+                <div id="btn" class="dot" onclick="point('.')">&#149;</div>
+                <div id="btn" class="arithmetics" onclick="solve()"><span class="fas fa-equals"></span></div>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div onclick="show()"><span style="cursor: pointer !important; color: #000;" class="fas fa-calculator"></span>
+                <p>Standard</p>
+            </div>
+            <div onclick="shows()"><span style="cursor: pointer !important; color: #000;" class="fas fa-adjust"></span>
+                <p>Demo</p>
+            </div>
+            <div onclick="shows()"><span style="cursor: pointer !important; color: #000;" class="fas fa-adjust"></span>
+                <p>Demo</p>
+            </div>
+            <div onclick="shows()"><span style="cursor: pointer !important; color: #000;" class="fas fa-adjust"></span>
+                <p>Demo</p>
+            </div>
+            <div onclick="shows()"><span style="cursor: pointer !important; color: #000;" class="fas fa-adjust"></span>
+                <p>Demo</p>
+            </div>
+        </div>
+
+
+        <div id="blur" onclick="show()"></div>
+    </div>
+
+    <div id="blank">
+        <div>
+
+        </div>
+
+        <input type="text" id="numbTracker" autofocus oninput="track()">
+
+</body>
+
+</html>

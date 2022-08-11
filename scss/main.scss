@@ -1,0 +1,423 @@
+
+// .header{
+//     grid-column: 1 / -1;
+// }
+
+// .content{
+//     grid-column: 1 / -1;
+// }
+
+// .footer{
+//     grid-column: 1 / -1;
+// }
+
+$color1: #ff0e00;
+$color2: #0000e1;
+$color3: #00e717;
+$color4: #ffd000;
+$bgcolor: #fff;
+$bgcolor2: #d3d3d3;
+$fontFamily: sans-serif;
+$brad: 10px;
+
+html{
+    height: 100%;
+}
+
+body{
+    user-select: none;
+    margin: 0;
+    margin-bottom: 0;
+    height: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+
+}
+
+
+#container{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+    min-width: 400px !important;
+    max-width: 500px !important;
+    grid-template-rows: 200px 500px 115px;
+    background-color: $bgcolor;
+}
+
+
+
+
+#one, #two, #three{
+    transition: 1s ease-in-out all;
+}
+
+#bar1{
+    background-color: $color1 !important;
+}
+
+body{
+    font-family: $fontFamily;
+    margin: 0;
+    background-color: $bgcolor2;
+}
+
+#container{
+    background-color: $bgcolor;
+
+}
+
+.header{
+    margin-top: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/otondo_blur.png);
+    width: 100%;
+    text-align: center;
+    animation: logo 8s 2s infinite;
+    z-index: 2;
+    background-color: $bgcolor;
+}
+
+.content{
+    margin-bottom: 600px !important;
+    width: 100%;
+    background-color: $bgcolor;
+    position: relative;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 1fr 60px;
+    grid-template-columns: 1fr;
+    background-color: #E6E6E6;
+}
+
+#menu_icon{
+    margin-top: -50px;
+    margin-left: 10px;
+    height: 50px;
+    width: 40px;
+    text-align: left;
+    color: #000;
+    cursor: pointer;
+    z-index: 10;
+    background-color: $bgcolor;
+    text-align: center;
+}
+// .footer{
+//     width: 100%;
+//     box-shadow: 0px -1px 5px rgb(0, 0, 0);
+//     margin-bottom: 0;
+// }
+
+@keyframes logo {
+    0%{background-image: url(../images/otondo_blur.png);}
+    25%{background-image: url(../images/otondo_blur2.png);}
+    55%{background-image: url(../images/otondo_blur3.png);}
+    85%{background-image: url(../images/otondo_blur4.png);}
+}
+
+#blank {
+    z-index: 10 !important;
+    min-width: 0px;
+}
+
+
+                    // BOTTOM
+#menu {
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    z-index: 0;
+    animation-name: slide;
+    animation-duration: 1s;
+    width: 100%;
+    margin-top: -500px;
+    background-color: #fff;
+    z-index: 4 !important;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+// #menu div:first-child {
+//     margin-left: 0px !important;
+// }
+
+#menu div {
+    margin: 20px 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    font-size: 2rem;
+    font-family: cursive;
+    cursor: pointer;
+    z-index: 4 !important;
+}
+
+#menu p {
+    margin-left: 20px;
+    font-size: 1.4rem;
+}
+
+@keyframes slide {
+    0%{margin-top: -2000px;}
+    60%{margin-top: -450px;}
+    90%{margin-top: -500px;}
+}
+
+span{
+    z-index: 0 !important;
+    color: #000;
+    cursor: pointer;
+}
+
+#blur{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .4;
+    margin-top: -900px;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: .5s ease-in-out all;
+}
+                    // CHAT - AREA
+
+
+                // CALCULATOR
+#keys{
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
+    display: grid;
+    grid-gap: 4px;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#screen{
+    width: 90%;
+    margin: 0 auto;
+    height: 150px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 35px 80px 30px;
+}
+
+#top {
+    color: #4A4A4A;
+    height: 100%;
+    margin-top: 20px;
+    text-align: end;
+    margin-right: 5px;
+    letter-spacing: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#bottom{
+    font-size: 50px;
+    text-align: end;
+    color: #000;
+    font-weight: bolder;
+    letter-spacing: 0px;
+    overflow-x: hidden;
+    text-align: right;
+    align-content: right;
+    align-self: right;
+    align-items: center;
+}
+
+#bottom_parent{
+    align-content: right;
+    height: 85px;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+#btn{
+    background-color: #e6e6e6;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+#btn:hover{
+    background-color: $color3;
+    color: #fff;
+}
+
+#m_famz{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    // margin-left: -13px;
+    cursor: pointer;
+}
+
+#m_famz div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 8px !important;
+    border-radius: 5px;
+    width: 50px !important;
+    height: 30px;
+    align-items: center;
+}
+
+#m_famz div:hover{
+    box-shadow: 0 0 1px .9px black;
+}
+
+#m_famz div:active{
+    box-shadow: 0 0 3px 1.8px black;
+}
+#m_famz div {
+    width: 20%;
+    margin-left: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.numbs{
+    background-color: #8d8d8d !important;
+    font-size: 1.5rem !important;
+    font-weight: bolder !important;
+    color: #000;
+    transition: .1s ease-in-out background-color;
+}
+
+.dot {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.neg{
+    letter-spacing: -3px;
+    font-size: 25px !important;
+}
+
+
+.numbs:hover {
+    background-color: $color4 !important;
+    color: #6e6e6e !important;
+}
+
+.arithmetics, .delete {
+    font-size: 1.4rem !important;
+    font-weight: lighter !important;
+    transition: .1s ease-in-out background-color;
+}
+
+.arithmetics:hover{
+    background-color: $color2 !important;
+    color: #fff !important;
+}
+
+.delete:hover {
+    background-color: $color1 !important;
+    color: #fff !important;
+}
+
+.delete {
+    font-size: 1.4rem !important;
+    font-weight: bolder !important;
+}
+
+#numbTracker{
+    background-color: white; 
+    position: absolute;
+    top: -50px;
+    left: 250px;
+    
+}
+
+#history{
+    margin: 0 0 5px 0;
+    font-weight: bolder;
+}
+
+#History{
+    width: 100%;
+    height: 818px;
+    background-color: transparent;
+    margin-top: -370px;
+    z-index: 10;
+    display: none;
+    grid-template-rows: 368px 415px 35px;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+}
+
+#lists{
+    background-color: #1A1A1A;
+    // height: 450px;
+    // margin-top: 368px;
+    opacity: 1 !important;
+    animation-name: surf;
+    animation-duration: .3s;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+#blured{
+    animation-name: blured;
+    animation-duration: .6s;
+    background-color: #4A4A4A;
+    opacity: .15 !important;
+    z-index: 10;
+}
+
+@keyframes blured {
+    from{margin-top: 950px; height: 0px;}
+    to{margin-top: 0px; height: 450px;}
+}
+
+@keyframes surf {
+    from{margin-top: 450px; height: 0px;}
+    to{margin-top: 0px; height: 450px;}
+}
+
+#clear{
+    font-size: 20px;
+    color: #fff;
+    float: right;
+    margin: 10px 15px 0 0;
+    cursor: pointer;
+}
+
+#clear_container{
+    background-color: #1A1A1A !important;
+    z-index: 10;
+    opacity: 1;
+
+}
+
+.memory{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: cursive;
+    z-index: 90;
+}
